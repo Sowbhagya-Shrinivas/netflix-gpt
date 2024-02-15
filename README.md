@@ -102,5 +102,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - install redux tool kit : npm i -D @reduxjs/toolkit
 - npm install react-redux
 
-### tmdb api's
+### tmdb api'
+- register tmdb account
+- create app
+- get access token
+- documentation developer 
+- API reference - 
+    - MOVIEW LIST - Now Playing API
 
