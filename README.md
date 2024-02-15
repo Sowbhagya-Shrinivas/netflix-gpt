@@ -87,6 +87,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Search Bar
     - Movie Suggestions
 
-# liberary use to build Form in react
+### liberary use to build Form in react
 - Formik
+
+### firebase to build authentication and deploy app to production
+- firebase.google.com
+- follow document of firebase.google.com
+- sudo npm -g i firebase-tools
+- firebase login
+- firebase init
+- firebase deploy
+- https://firebase.google.com/docs/auth/web/password-auth - to create users
+
+- install redux tool kit : npm i -D @reduxjs/toolkit
+- npm install react-redux
+
+### tmdb api's
 
