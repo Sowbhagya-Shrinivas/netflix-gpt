@@ -8,12 +8,15 @@ import { removeUser } from "../utils/userSlice";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { NETFLIX_LOGO } from "../utils/constants";
+import { NETFLIX_LOGO, SUPPOPTED_LANGUAGES } from "../utils/constants";
+import { toggleGptSearchView } from "../utils/gptSlice";
+import { changeLangugage } from "../utils/configSlice";
 
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
   const handleSignOut = () => {
     signOut(auth)
@@ -46,6 +49,15 @@ const Header = () => {
     return () => unsubscribe(); //unsubscribe when component unmounts
   }, []);
 
+  const handleGptSearchClick = () => {
+    //toggle GPT Search
+    dispatch(toggleGptSearchView());
+  };
+
+  const handleLanguageChange = (e) => {
+    dispatch(changeLangugage(e.target.value));
+  };
+
   return (
     <div className="absolute z-10 flex justify-between w-screen">
       <img
@@ -55,6 +67,24 @@ const Header = () => {
       />
       {user && (
         <div className="flex">
+          {showGptSearch && (
+            <select
+              onChange={handleLanguageChange}
+              className="text-white bg-gray-800 w-13 h-12 mx-2"
+            >
+              {SUPPOPTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            onClick={handleGptSearchClick}
+            className="text-white bg-purple-800 rounded-lg w-13 h-12 mx-2"
+          >
+            {showGptSearch ? "Home Page" : "GPT Search"}
+          </button>
           <img className="w-12 h-12" alt="usericon" src={user?.photoURL} />
           <button
             onClick={handleSignOut}

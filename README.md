@@ -110,3 +110,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - API reference - 
     - MOVIEW LIST - Now Playing API
 
+### GPT Search feature
+
