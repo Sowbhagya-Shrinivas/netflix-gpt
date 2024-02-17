@@ -8,8 +8,9 @@ const GptSearch = () => {
       <div className="fixed -z-10">
         <img src={BACKGROUND_LOGO} alt="logo" />
       </div>
-      <GptSearchBar />
-      <GptMovieSuggestions />
+      <div className="pt-[30%] md:p-0"><GptSearchBar />
+      <GptMovieSuggestions /></div>
+      
     </div>
   );
 };

@@ -60,9 +60,9 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute z-10 flex justify-between w-screen">
+    <div className="absolute z-10 flex justify-between w-screen flex-col md:flex-row">
       <img
-        className="w-72 px-8 py-2 bg-gradient-to-b from-black"
+        className="w-72 px-8 py-2 bg-gradient-to-b from-black md:mx-0 mx-auto"
         alt="Netflix Logo"
         src={NETFLIX_LOGO}
       />
