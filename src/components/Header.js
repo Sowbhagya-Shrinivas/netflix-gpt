@@ -9,7 +9,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { NETFLIX_LOGO, SUPPOPTED_LANGUAGES } from "../utils/constants";
-import { toggleGptSearchView } from "../utils/gptSlice";
+import { clearGptMovieResult, toggleGptSearchView } from "../utils/gptSlice";
 import { changeLangugage } from "../utils/configSlice";
 
 const Header = () => {
@@ -52,6 +52,7 @@ const Header = () => {
   const handleGptSearchClick = () => {
     //toggle GPT Search
     dispatch(toggleGptSearchView());
+    dispatch(clearGptMovieResult());
   };
 
   const handleLanguageChange = (e) => {

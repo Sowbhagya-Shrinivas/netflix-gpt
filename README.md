@@ -111,4 +111,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - MOVIEW LIST - Now Playing API
 
 ### GPT Search feature
+- platform.openai.com
+- install npm openai
+- https://developer.themoviedb.org/reference/intro/getting-started
 

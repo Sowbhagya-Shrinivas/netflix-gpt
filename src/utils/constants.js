@@ -23,3 +23,5 @@ export const SUPPOPTED_LANGUAGES = [
   { identifier: "kannada", name: "Kannada" },
   { identifier: "spanish", name: "Spanish"}
 ];
+
+export const OPENAPI_KEY = "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"
